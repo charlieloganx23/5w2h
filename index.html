@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ferramenta 5W2H</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Adicione este link para a biblioteca html2pdf.js -->
+  <script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+  <!-- Adicione este link para a biblioteca mammoth.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.0.2/mammoth.browser.min.js"></script>
+  <!-- Adicione este link para a biblioteca SheetJS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Ferramenta 5W2H</h1>
+    <form id="form">
+      <label for="what">O quê:</label>
+      <input type="text" id="what" required>
+
+      <label for="why">Por quê:</label>
+      <input type="text" id="why" required>
+
+      <label for="where">Onde:</label>
+      <input type="text" id="where" required>
+
+      <label for="when">Quando:</label>
+      <input type="text" id="when" required>
+
+      <label for="who">Quem:</label>
+      <input type="text" id="who" required>
+
+      <label for="how">Como:</label>
+      <input type="text" id="how" required>
+
+      <label for="how-much">Quanto:</label>
+      <input type="text" id="how-much" required>
+
+      <!-- Adicione o campo "Status" -->
+      <label for="status">Status:</label>
+      <input type="text" id="status" required>
+
+      <button type="button" onclick="submitForm()">Inserir</button>
+    </form>
+
+    <div id="output">
+      <h2>Lista de Inserções:</h2>
+      <ul id="list"></ul>
+      
+      <!-- Adicione a tabela e os botões de Excel e Texto -->
+      <div id="table-container"></div>
+      <div class="button-container">
+        <button id="excel-button" onclick="downloadTableAsExcel()">Download Excel</button>
+        <button id="text-button" onclick="downloadTableAsText()">Download Texto</button>
+        <button id="word-button" onclick="downloadTableAsWord()">Download Word</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
